@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>CRB - Coaching Bricolage & Rénovation</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <img src="logo-crb.png" alt="Logo CRB" class="logo">
+  <nav>
+    <a href="#accueil">Accueil</a>
+    <a href="#services">Services</a>
+    <a href="#methode">Méthode</a>
+    <a href="#apropos">À propos</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section id="accueil" class="hero">
+  <h1>Coaching & Accompagnement en Travaux</h1>
+  <p>Réussissez vos projets de rénovation avec un expert à vos côtés</p>
+</section>
+
+<section id="services">
+  <h2>Nos services</h2>
+  <ul>
+    <li>✔ Conseil avant travaux</li>
+    <li>✔ Coaching bricolage personnalisé</li>
+    <li>✔ Accompagnement rénovation</li>
+    <li>✔ Aide au choix des matériaux</li>
+  </ul>
+</section>
+
+<section id="methode">
+  <h2>Notre méthode</h2>
+  <p>
+    CRB vous accompagne étape par étape : analyse du projet, conseils techniques,
+    organisation des travaux et suivi pour un résultat fiable et sécurisé.
+  </p>
+</section>
+
+<section id="apropos">
+  <h2>À propos de CRB</h2>
+  <p>
+    CRB (Coaching Bricolage & Rénovation) aide les particuliers à mener leurs travaux
+    en toute confiance grâce à un accompagnement clair, pédagogique et professionnel.
+  </p>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p>Email : contact@crb.fr</p>
+  <p>Téléphone : 06 00 00 00 00</p>
+</section>
+
+<footer>
+  <p>© 2026 - CRB Coaching Bricolage & Rénovation</p>
+</footer>
+
+</body>
+</html>
