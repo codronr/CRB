@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact – CRB Coaching Bricolage & Rénovation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contactez CRB pour vos projets de bricolage et rénovation.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ===== HEADER / MENU ===== -->
+<header class="topbar">
+  <div class="container topbar-inner">
+    <div class="brand">
+      <img src="logo-crb.png" alt="CRB" class="brand-logo">
+      <span class="brand-name">CRB Coaching Bricolage & Rénovation</span>
+    </div>
+
+    <nav class="main-nav">
+      <a href="index.html" class="nav-link">Accueil</a>
+      <a href="services.html" class="nav-link">Services</a>
+      <a href="tarifs.html" class="nav-link">Tarifs</a>
+      <a href="realisations.html" class="nav-link">Réalisations</a>
+      <a href="contact.html" class="nav-cta">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="container">
+    <h1>Contactez-nous</h1>
+    <p>Présentez-nous votre projet, nous vous répondrons rapidement</p>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section class="contact">
+  <div class="container">
+
+    <h2>Envoyer un message</h2>
+
+    <!-- MESSAGE SUCCÈS -->
+    <p class="success-msg" hidden>
+      ✅ Message envoyé avec succès. Nous vous répondrons rapidement.
+    </p>
+
+    <!-- FORMULAIRE NETLIFY -->
+    <form
+      name="contact"
+      method="POST"
+      data-netlify="true"
+      netlify-honeypot="bot-field"
+      class="contact-form"
+      action="/contact.html?success=1"
+    >
+
+      <!-- Champ Netlify obligatoire -->
+      <input type="hidden" name="form-name" value="contact">
+
+      <!-- Anti-spam -->
+      <input type="text" name="bot-field" style="display:none">
+
+      <input type="text" name="nom" placeholder="Votre nom" required>
+      <input type="email" name="email" placeholder="Votre email" required>
+      <input type="text" name="sujet" placeholder="Sujet" required>
+      <textarea name="message" placeholder="Votre message" rows="6" required></textarea>
+
+      <button type="submit" class="btn">Envoyer le message</button>
+    </form>
+
+    <!-- INFOS -->
+    <div class="contact-infos">
+      <p>📞 <strong>Téléphone :</strong> 06 46 43 57 53</p>
+      <p>📧 <strong>Email :</strong> romuald.codron@orange.fr</p>
+    </div>
+
+    <!-- GOOGLE MAPS -->
+    <div class="map">
+      <iframe
+        src="https://www.google.com/maps?q=Valenciennes&output=embed"
+        width="100%"
+        height="300"
+        style="border:0;"
+        allowfullscreen
+        loading="lazy">
+      </iframe>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <p>
+    © 2026 CRB – Coaching Bricolage & Rénovation |
+    <a href="mentions-legales.html" style="color:#fff;">Mentions légales</a>
+  </p>
+</footer>
+
+<!-- ===== SCRIPT MESSAGE SUCCÈS ===== -->
+<script>
+  if (window.location.search.includes("success")) {
+    const msg = document.querySelector(".success-msg");
+    if (msg) msg.hidden = false;
+  }
+</script>
+
+</body>
+</html>

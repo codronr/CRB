@@ -1,0 +1,59 @@
+<?php
+// ==============================
+// ANTI-SPAM (champ caché)
+// ==============================
+if (!empty($_POST['website'])) {
+    exit;
+}
+
+// ==============================
+// VÉRIFICATION MÉTHODE
+// ==============================
+if ($_SERVER["REQUEST_METHOD"] !== "POST") {
+    exit;
+}
+
+// ==============================
+// SÉCURISATION DES DONNÉES
+// ==============================
+$nom     = isset($_POST['nom']) ? trim($_POST['nom']) : '';
+$email   = isset($_POST['email']) ? trim($_POST['email']) : '';
+$sujet   = isset($_POST['sujet']) ? trim($_POST['sujet']) : '';
+$message = isset($_POST['message']) ? trim($_POST['message']) : '';
+
+if ($nom === '' || $email === '' || $sujet === '' || $message === '') {
+    exit;
+}
+
+// ==============================
+// ADRESSE DE RÉCEPTION
+// ==============================
+$to = "romuald.codron@orange.fr";
+
+// ==============================
+// EN-TÊTES EMAIL
+// ==============================
+$headers  = "From: CRB Contact <no-reply@crb.fr>\r\n";
+$headers .= "Reply-To: ".$email."\r\n";
+$headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
+
+// ==============================
+// CONTENU DU MESSAGE
+// ==============================
+$body  = "Nouveau message depuis le site CRB\n";
+$body .= "---------------------------------\n\n";
+$body .= "Nom : ".$nom."\n";
+$body .= "Email : ".$email."\n\n";
+$body .= "Sujet : ".$sujet."\n\n";
+$body .= "Message :\n".$message."\n";
+
+// ==============================
+// ENVOI
+// ==============================
+if (mail($to, $sujet, $body, $headers)) {
+    header("Location: contact.php?success=1");
+    exit;
+} else {
+    echo "Une erreur est survenue lors de l'envoi du message.";
+}
+?>

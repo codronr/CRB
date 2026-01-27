@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Réservation – CRB Coaching Bricolage & Rénovation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Réservez votre coaching bricolage ou accompagnement chantier avec CRB.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ===== BANNIÈRE / MENU ===== -->
+<header class="topbar">
+  <div class="container topbar-inner">
+    <div class="brand">
+      <img src="logo-crb.png" alt="CRB" class="brand-logo">
+      <span class="brand-name">CRB Coaching Bricolage & Rénovation</span>
+    </div>
+
+    <nav class="main-nav">
+      <a href="index.html" class="nav-link">Accueil</a>
+      <a href="services.html" class="nav-link">Services</a>
+      <a href="tarifs.html" class="nav-link">Tarifs</a>
+      <a href="realisations.html" class="nav-link">Réalisations</a>
+      <a href="contact.php" class="nav-link">Contact</a>
+      <a href="reservation.html" class="nav-cta">Réserver</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="container">
+    <h1>Réserver un accompagnement</h1>
+    <p>Choisissez votre prestation et proposez vos disponibilités</p>
+  </div>
+</section>
+
+<!-- ===== RÉSERVATION ===== -->
+<section>
+  <div class="container">
+
+    <h2>Formulaire de réservation</h2>
+
+    <form class="contact-form">
+
+      <input type="text" placeholder="Nom et prénom" required>
+      <input type="email" placeholder="Adresse email" required>
+      <input type="tel" placeholder="Téléphone" required>
+
+      <select required>
+        <option value="">Choisissez la prestation</option>
+        <option>Conseil & diagnostic</option>
+        <option>Coaching bricolage</option>
+        <option>Accompagnement chantier</option>
+      </select>
+
+      <select required>
+        <option value="">Durée souhaitée</option>
+        <option>3 heures</option>
+        <option>5 heures</option>
+        <option>10 heures</option>
+        <option>Sur devis</option>
+      </select>
+
+      <input type="date" required>
+      <input type="time" required>
+
+      <textarea rows="5" placeholder="Décrivez brièvement votre projet"></textarea>
+
+      <button type="submit" class="btn">Envoyer la demande</button>
+    </form>
+
+    <p style="margin-top:30px; font-size:16px;">
+      📌 La réservation sera confirmée après validation par CRB.<br>
+      📞 Pour toute urgence : <strong>06 46 43 57 53</strong>
+    </p>
+
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <p>
+    © 2026 CRB – Coaching Bricolage & Rénovation |
+    <a href="mentions-legales.html" style="color:#fff;">Mentions légales</a>
+  </p>
+</footer>
+
+</body>
+</html>

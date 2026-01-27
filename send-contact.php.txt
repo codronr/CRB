@@ -1,0 +1,24 @@
+<?php
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+
+  // Anti-spam
+  if (!empty($_POST["website"])) {
+    exit;
+  }
+
+  $nom = htmlspecialchars($_POST["nom"]);
+  $email = htmlspecialchars($_POST["email"]);
+  $sujet = htmlspecialchars($_POST["sujet"]);
+  $message = htmlspecialchars($_POST["message"]);
+
+  $to = "contact@crb.fr"; // ⚠️ MET TON EMAIL ICI
+  $subject = "Message site CRB : " . $sujet;
+  $body = "Nom : $nom\nEmail : $email\n\nMessage :\n$message";
+  $headers = "From: $email";
+
+  mail($to, $subject, $body, $headers);
+
+  header("Location: contact.php?success=1");
+  exit;
+}
+?>
